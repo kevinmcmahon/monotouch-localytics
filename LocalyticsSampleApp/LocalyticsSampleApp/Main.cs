@@ -30,6 +30,9 @@ namespace LocalyticsSampleApp
 		// This method is invoked when the application has loaded its UI and its ready to run
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+			if(string.IsNullOrEmpty(YOUR_LOCALYTICS_APP_KEY))
+				throw new ArgumentException("You must provide a valid Localytics app key. Get one "+
+				                            "at http://www.localytics.com");
 			// If you have defined a view, add it here:
 			// window.AddSubview (navigationController.View);
 			window.MakeKeyAndVisible ();
