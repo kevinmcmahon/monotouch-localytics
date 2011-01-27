@@ -38,10 +38,16 @@ namespace LocalyticsSampleApp
 			window.MakeKeyAndVisible ();
 
 			Localytics.LocalyticsSession.SharedLocalyticsSession.StartSession(YOUR_LOCALYTICS_APP_KEY);
+			Localytics.LocalyticsSession.SharedLocalyticsSession.Open();
 			
 			button.TouchDown += (o,e) => {
+				Console.WriteLine("Touch Me Hit");
 				Localytics.LocalyticsSession.SharedLocalyticsSession.TagEvent("SampleApp Button Touch");
-				
+			};
+			
+			upload.TouchDown += (o,e) => {
+				Console.WriteLine("Trigger Upload Hit");
+				Localytics.LocalyticsSession.SharedLocalyticsSession.Upload();
 			};
 			return true;
 		}

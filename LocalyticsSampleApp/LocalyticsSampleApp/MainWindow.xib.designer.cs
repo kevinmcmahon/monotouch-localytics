@@ -19,6 +19,8 @@ namespace LocalyticsSampleApp {
 		
 		private MonoTouch.UIKit.UIButton __mt_button;
 		
+		private MonoTouch.UIKit.UIButton __mt_upload;
+		
 		#pragma warning disable 0169
 		[MonoTouch.Foundation.Connect("window")]
 		private MonoTouch.UIKit.UIWindow window {
@@ -41,6 +43,18 @@ namespace LocalyticsSampleApp {
 			set {
 				this.__mt_button = value;
 				this.SetNativeField("button", value);
+			}
+		}
+		
+		[MonoTouch.Foundation.Connect("upload")]
+		private MonoTouch.UIKit.UIButton upload {
+			get {
+				this.__mt_upload = ((MonoTouch.UIKit.UIButton)(this.GetNativeField("upload")));
+				return this.__mt_upload;
+			}
+			set {
+				this.__mt_upload = value;
+				this.SetNativeField("upload", value);
 			}
 		}
 	}
