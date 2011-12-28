@@ -1,0 +1,258 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7101380019AF4374AA4FED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FED6 /* Foundation.framework */; };
+		D7101380019AF4374AA4FEDD /* LocalyticsDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FEDC /* LocalyticsDatabase.h */; };
+		D7101380019AF4374AA4FEDF /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FEDE /* LocalyticsDatabase.m */; };
+		D7101380019AF4374AA4FEE1 /* LocalyticsSession.h in Headers */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FEE0 /* LocalyticsSession.h */; };
+		D7101380019AF4374AA4FEE3 /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FEE2 /* LocalyticsSession.m */; };
+		D7101380019AF4374AA4FEE5 /* UploaderThread.h in Headers */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FEE4 /* UploaderThread.h */; };
+		D7101380019AF4374AA4FEE7 /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FEE6 /* UploaderThread.m */; };
+		D7101380019AF4374AA4FEE9 /* WebserviceConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = D7101380019AF4374AA4FEE8 /* WebserviceConstants.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D7101380019AF4374AA4FECD /* libLocalytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLocalytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7101380019AF4374AA4FED6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D7101380019AF4374AA4FEDA /* Localytics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Localytics-Prefix.pch"; sourceTree = "<group>"; };
+		D7101380019AF4374AA4FEDC /* LocalyticsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsDatabase.h; sourceTree = "<group>"; };
+		D7101380019AF4374AA4FEDE /* LocalyticsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsDatabase.m; sourceTree = "<group>"; };
+		D7101380019AF4374AA4FEE0 /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		D7101380019AF4374AA4FEE2 /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
+		D7101380019AF4374AA4FEE4 /* UploaderThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploaderThread.h; sourceTree = "<group>"; };
+		D7101380019AF4374AA4FEE6 /* UploaderThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploaderThread.m; sourceTree = "<group>"; };
+		D7101380019AF4374AA4FEE8 /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7101380019AF4374AA4FED4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7101380019AF4374AA4FED7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7101380019AF4374AA4FEC9 = {
+			isa = PBXGroup;
+			children = (
+				D7101380019AF4374AA4FECA /* Products */,
+				D7101380019AF4374AA4FED5 /* Frameworks */,
+				D7101380019AF4374AA4FED8 /* Localytics */,
+			);
+			sourceTree = "<group>";
+		};
+		D7101380019AF4374AA4FECA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7101380019AF4374AA4FECD /* libLocalytics.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7101380019AF4374AA4FED5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7101380019AF4374AA4FED6 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7101380019AF4374AA4FED8 /* Localytics */ = {
+			isa = PBXGroup;
+			children = (
+				D7101380019AF4374AA4FED9 /* Supporting Files */,
+				D7101380019AF4374AA4FEDB /* src */,
+			);
+			path = Localytics;
+			sourceTree = "<group>";
+		};
+		D7101380019AF4374AA4FED9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7101380019AF4374AA4FEDA /* Localytics-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7101380019AF4374AA4FEDB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D7101380019AF4374AA4FEE8 /* WebserviceConstants.h */,
+				D7101380019AF4374AA4FEE6 /* UploaderThread.m */,
+				D7101380019AF4374AA4FEE4 /* UploaderThread.h */,
+				D7101380019AF4374AA4FEE2 /* LocalyticsSession.m */,
+				D7101380019AF4374AA4FEE0 /* LocalyticsSession.h */,
+				D7101380019AF4374AA4FEDE /* LocalyticsDatabase.m */,
+				D7101380019AF4374AA4FEDC /* LocalyticsDatabase.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D7101380019AF4374AA4FED2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7101380019AF4374AA4FEDD /* LocalyticsDatabase.h in Headers */,
+				D7101380019AF4374AA4FEE1 /* LocalyticsSession.h in Headers */,
+				D7101380019AF4374AA4FEE5 /* UploaderThread.h in Headers */,
+				D7101380019AF4374AA4FEE9 /* WebserviceConstants.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D7101380019AF4374AA4FECE /* Localytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7101380019AF4374AA4FECF /* Build configuration list for PBXNativeTarget "Localytics" */;
+			buildPhases = (
+				D7101380019AF4374AA4FED2 /* Headers */,
+				D7101380019AF4374AA4FED3 /* Sources */,
+				D7101380019AF4374AA4FED4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Localytics;
+			productName = Localytics;
+			productReference = D7101380019AF4374AA4FECD /* libLocalytics.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7101380019AF4374AA4FEC7 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = D7101380019AF4374AA4FEC8 /* Build configuration list for PBXProject "Localytics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7101380019AF4374AA4FEC9;
+			productRefGroup = D7101380019AF4374AA4FECA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7101380019AF4374AA4FECE /* Localytics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7101380019AF4374AA4FED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7101380019AF4374AA4FEDF /* LocalyticsDatabase.m in Sources */,
+				D7101380019AF4374AA4FEE3 /* LocalyticsSession.m in Sources */,
+				D7101380019AF4374AA4FEE7 /* UploaderThread.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D7101380019AF4374AA4FECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7101380019AF4374AA4FECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D7101380019AF4374AA4FED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Localytics.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Localytics/Localytics-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D7101380019AF4374AA4FED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Localytics.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Localytics/Localytics-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7101380019AF4374AA4FEC8 /* Build configuration list for PBXProject "Localytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7101380019AF4374AA4FECB /* Release */,
+				D7101380019AF4374AA4FECC /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7101380019AF4374AA4FECF /* Build configuration list for PBXNativeTarget "Localytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7101380019AF4374AA4FED0 /* Release */,
+				D7101380019AF4374AA4FED1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7101380019AF4374AA4FEC7 /* Project object */;
+}

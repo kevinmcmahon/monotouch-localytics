@@ -1,13 +1,10 @@
 //
-//  MonoTouch bindings for Localytics version 1.7 for iOS 4
+//  MonoTouch bindings for Localytics version 2.5 for iOS 5
 //  use with libLocalytics.a  
-//
-//  Localytics iOS 4 Integration information:
-//  http://wiki.localytics.com/doku.php?id=iphone_ios4_integration
 //
 //  MIT X11 licensed
 //
-// Copyright 2011 Kevin McMahon (http://twitter.com/klmcmahon)
+// Copyright © 2011 Kevin McMahon (http://twitter.com/klmcmahon)
 // 
 
 using System;
@@ -60,21 +57,34 @@ namespace Localytics
 		[Export ("tagEvent:attributes:")]
 		void TagEvent (string tagEvent, NSDictionary attributes);
 
+		//- (void)tagEvent:(NSString *)event attributes:(NSDictionary *)attributes reportAttributes:(NSDictionary *)reportAttributes;
+		[Export ("tagEvent:attributes:reportAttributes:")]
+		void TagEvent (string tagEvent, NSDictionary attributes, NSDictionary reportAttributes);
+
+		//- (void)tagScreen:(NSString *)screen;
+		[Export ("tagScreen:")]
+		void TagScreen (string screen);
+
 		//- (void)upload;
 		[Export ("upload")]
 		void Upload ();
+
+		//- (void)setCustomDimension:(int)dimension value:(NSString *)value;
+		[Export ("setCustomDimension:value:")]
+		void SetCustomDimension (int dimension, string value);
 		
 		//@property BOOL isSessionOpen;
 		[Export ("isSessionOpen")]
-		bool IsSessionOpen { get; set;  }
+ 		bool IsSessionOpen { get; set; }
 
 		//@property BOOL hasInitialized;		
 		[Export ("hasInitialized")]
-		bool HasInitialized{ get; set;  }
+ 		bool HasInitialized { get; set; }
 
 		//@property float backgroundSessionTimeout;
 		[Export ("backgroundSessionTimeout")]
-		float BackgroundSessionTimeout { get; set;  }
+		float BackgroundSessionTimeout { get; set; }
+
 	}
 
 	[BaseType (typeof (NSObject))]
@@ -84,20 +94,16 @@ namespace Localytics
 		[Static, Export ("sharedUploaderThread")]
 		UploaderThread SharedUploaderThread { get; }
 
-		//- (void)UploaderThread:(NSString *)localyticsFilePath;
-		[Export ("UploaderThread:")]
-		void InitializeUploaderThread (string localyticsFilePath);
-		
+		//- (void)uploaderThreadwithApplicationKey:(NSString *)localyticsApplicationKey;
+		[Export ("uploaderThreadwithApplicationKey:")]
+		void UploaderThreadwithApplicationKey (string localyticsApplicationKey);
+
 		//@property (nonatomic, retain) NSURLConnection *uploadConnection;
 		[Export ("uploadConnection", ArgumentSemantic.Retain)]
 		NSUrlConnection UploadConnection { get; set;  }
 
-		//@property (nonatomic, retain) NSString *localyticsFilePath;
-		[Export ("localyticsFilePath", ArgumentSemantic.Retain)]
-		string LocalyticsFilePath { get; set;  }
-		
 		//@property BOOL isUploading;
 		[Export ("isUploading")]
-		bool IsUploading { get; set; }
+ 		bool IsUploading { get; set; }
 	}
 }
