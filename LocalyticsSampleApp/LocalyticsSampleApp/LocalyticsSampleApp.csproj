@@ -34,7 +34,7 @@
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <MtouchI18n />
-    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir} -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
+    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir}  -lsqlite3 -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,7 +48,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchI18n />
-    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir} -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
+    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir} -lsqlite3 -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
     <IpaPackageName />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
@@ -60,7 +60,7 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchI18n />
-    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir} -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
+    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir}  -lsqlite3 -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
