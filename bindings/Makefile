@@ -2,6 +2,9 @@ XBUILD=/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=../Localytics-v2.5-src/Localytics
 PROJECT=$(PROJECT_ROOT)/Localytics.xcodeproj
 TARGET=Localytics
+BUILD_FLAGS=-unsafe -target:library -nowarn:436 -nowarn:219
+BTOUCH=/Developer/MonoTouch/usr/bin/btouch
+SMCS=/Developer/MonoTouch/usr/bin/smcs
 
 all: monotouch-localytics.dll
 
@@ -22,11 +25,11 @@ libLocalytics-armv7.a:
 libLocalytics-fat.a: libLocalytics-i386.a libLocalytics-armv6.a libLocalytics-armv7.a
 	lipo -create -output $@ $^
 
-monotouch-localytics.dll: localytics.cs libLocalytics-fat.a
-	/Developer/MonoTouch/usr/bin/btouch -e localytics.cs --out=$@ --link-with=libLocalytics-fat.a,libLocalytics-fat.a
+monotouch-localytics.dll: localytics.cs AssemblyInfo.cs libLocalytics-fat.a
+	$(BTOUCH) --out=$@ -e localytics.cs AssemblyInfo.cs --link-with=libLocalytics-fat.a,libLocalytics-fat.a
 
-monotouch-localytics-debug.dll: localytics.cs libLocalytics-fat.a
-	/Developer/MonoTouch/usr/bin/btouch -v --debug -outdir=/tmp -e localytics.cs --out=$@ --link-with=libLocalytics-fat.a,libLocalytics-fat.a
+monotouch-localytics-debug.dll: localytics.cs AssemblyInfo.cs libLocalytics-fat.a
+	/Developer/MonoTouch/usr/bin/btouch -v --debug -outdir=/tmp -e localytics.cs AssemblyInfo.cs --out=$@ --link-with=libLocalytics-fat.a,libLocalytics-fat.a
 
 clean:
 	-rm -f *.a *.dll

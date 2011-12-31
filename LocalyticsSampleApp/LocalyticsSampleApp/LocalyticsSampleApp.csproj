@@ -67,6 +67,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="TestFlight">
+      <HintPath>..\..\..\monotouch-bindings\TestFlight\binding\TestFlight.dll</HintPath>
+    </Reference>
     <Reference Include="monotouch-localytics">
       <HintPath>..\..\bindings\monotouch-localytics.dll</HintPath>
     </Reference>
