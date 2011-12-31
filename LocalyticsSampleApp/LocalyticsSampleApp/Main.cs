@@ -25,7 +25,7 @@ namespace LocalyticsSampleApp
 	// The name AppDelegate is referenced in the MainWindow.xib file.
 	public partial class AppDelegate : UIApplicationDelegate
 	{
-		string YOUR_LOCALYTICS_APP_KEY = "";
+		string YOUR_LOCALYTICS_APP_KEY = "bdac86c6cc0caa080426a28-8a2dcf46-2959-11e0-fe7e-00b9a8d53077";
 		
 		// This method is invoked when the application has loaded its UI and its ready to run
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
@@ -36,7 +36,7 @@ namespace LocalyticsSampleApp
 			// If you have defined a view, add it here:
 			// window.AddSubview (navigationController.View);
 			window.MakeKeyAndVisible ();
-
+			
 			Localytics.LocalyticsSession.SharedLocalyticsSession.StartSession(YOUR_LOCALYTICS_APP_KEY);
 			Localytics.LocalyticsSession.SharedLocalyticsSession.Open();
 			

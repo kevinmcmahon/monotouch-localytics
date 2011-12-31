@@ -23,7 +23,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <MtouchI18n />
-    <MtouchExtraArgs> -v -gcc_flags "-L${ProjectDir} -lsqlite3 -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
+    <MtouchExtraArgs>-v</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -34,7 +34,7 @@
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <MtouchI18n />
-    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir}  -lsqlite3 -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
+    <MtouchExtraArgs>-v</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,7 +48,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchI18n />
-    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir} -lsqlite3 -lLocalytics-fat -force_load ${ProjectDir}/libLocalytics-fat.a"</MtouchExtraArgs>
+    <MtouchExtraArgs>-v -gcc_flags "-L${ProjectDir}</MtouchExtraArgs>
     <IpaPackageName />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
@@ -68,12 +68,11 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="monotouch-localytics">
-      <HintPath>..\..\monotouch-localytics.dll</HintPath>
+      <HintPath>..\..\bindings\monotouch-localytics.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="libLocalytics-fat.a" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindow.xib.designer.cs">

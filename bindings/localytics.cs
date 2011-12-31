@@ -18,7 +18,7 @@ namespace Localytics
 	interface LocalyticsSession {
 
 		//+ (LocalyticsSession *)sharedLocalyticsSession;
-		[Static, Export ("sharedLocalyticsSession")]
+		[Export ("sharedLocalyticsSession")][Static][IsThreadStatic]
 		LocalyticsSession SharedLocalyticsSession { get; }
 
 		//- (void)LocalyticsSession:(NSString *)appKey;
