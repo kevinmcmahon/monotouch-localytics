@@ -1,4 +1,4 @@
-XBUILD=/Developer/usr/bin/xcodebuild
+XBUILD=/usr/bin/xcodebuild
 PROJECT_ROOT=../Localytics-v2.5-src/Localytics
 PROJECT=$(PROJECT_ROOT)/Localytics.xcodeproj
 TARGET=Localytics
