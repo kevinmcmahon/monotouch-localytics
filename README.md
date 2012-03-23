@@ -1,17 +1,7 @@
 Monotouch bindings for the Localytics iOS SDK
 ===========================================
 
-You can get the Localytics iOS code from their [website](http://wiki.localytics.com/doku.php?id=iphone_ios4_integration).
+- Run make to build the v2.5 version of Localytics and compile the bindings.
+- Add the monotouch-localytics.dll to your project references and start tracking analytics.
 
-Adding this lib to your project
--------------------------------
-
-- Copy libLocalytics-fat.a to the root of your project.
-- Add reference to monotouch-localytics.dll in your project.
-- In your MonoTouch project options > iPhone Build
-    - Set Linker behavior to "Link SDK assemblies only"
-    - Set the Extra arguments in all iPhone Build configurations to:
-
-          -v -gcc_flags "-L${ProjectDir} -lsqlite3 -lLocalytics-fat -framework CoreGraphics -force_load ${ProjectDir}/libLocalytics-fat.a"
-      
-      This includes build configs for Debug and Release versions of iPhone and iPhoneSimulator configs.
+Note: The static library that is created has been built for the i386, armv6, armv7 architectures and will work on both the simulator as well as iOS devices.
