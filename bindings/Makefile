@@ -1,5 +1,5 @@
 XBUILD=/usr/bin/xcodebuild
-PROJECT_ROOT=../Localytics-v2.5-src/Localytics
+PROJECT_ROOT=../Localytics-v2.16.1-src/Localytics
 PROJECT=$(PROJECT_ROOT)/Localytics.xcodeproj
 TARGET=Localytics
 BUILD_FLAGS=-unsafe -target:library -nowarn:436 -nowarn:219
@@ -14,15 +14,15 @@ libLocalytics-i386.a:
 	$(XBUILD) -project $(PROJECT) -target $(TARGET) -sdk iphonesimulator -configuration Release clean build
 	-mv $(PROJECT_ROOT)/build/Release-iphonesimulator/libLocalytics.a $@
 
-libLocalytics-armv6.a:
-	$(XBUILD) -project $(PROJECT) -target $(TARGET) -sdk iphoneos -arch armv6 -configuration Release clean build
-	-mv $(PROJECT_ROOT)/build/Release-iphoneos/libLocalytics.a $@
-
 libLocalytics-armv7.a:
 	$(XBUILD) -project $(PROJECT) -target $(TARGET) -sdk iphoneos -arch armv7 -configuration Release clean build
 	-mv $(PROJECT_ROOT)/build/Release-iphoneos/libLocalytics.a $@
 
-libLocalytics-fat.a: libLocalytics-i386.a libLocalytics-armv6.a libLocalytics-armv7.a
+libLocalytics-armv7s.a:
+	$(XBUILD) -project $(PROJECT) -target $(TARGET) -sdk iphoneos -arch armv7s -configuration Release clean build
+	-mv $(PROJECT_ROOT)/build/Release-iphoneos/libLocalytics.a $@
+
+libLocalytics-fat.a: libLocalytics-i386.a libLocalytics-armv7.a libLocalytics-armv7s.a
 	lipo -create -output $@ $^
 
 monotouch-localytics.dll: localytics.cs AssemblyInfo.cs libLocalytics-fat.a
